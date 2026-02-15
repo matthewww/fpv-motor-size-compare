@@ -1,5 +1,15 @@
 name: Deploy to GitHub Pages
 
+# This workflow automatically deploys the application to GitHub Pages.
+#
+# IMPORTANT: Before the first deployment can succeed, you must:
+# 1. Go to repository Settings → Pages
+# 2. Set "Source" to "GitHub Actions"
+# 3. Save the settings
+#
+# For detailed setup instructions, see: .github/GITHUB_PAGES_SETUP.md
+# For troubleshooting, see: DEPLOYMENT.md
+
 on:
   push:
     branches: ['main']
