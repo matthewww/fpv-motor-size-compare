@@ -4,6 +4,8 @@ Interactive 3D visualization tool for comparing FPV motor sizes. Built with Reac
 
 🚀 **[Try it live on GitHub Pages](https://matthewww.github.io/fpv-motor-size-compare/)**
 
+> **📝 Note for Repository Owners**: If you're seeing GitHub Actions deployment failures, please ensure GitHub Pages is enabled in your repository settings. See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed setup instructions.
+
 ![FPV Motor Comparison Tool](https://github.com/user-attachments/assets/112b6897-4cb4-4b93-a4ab-ddfebbf006c7)
 
 ## Features
@@ -75,10 +77,24 @@ npm run preview
    - **Pan**: Right-click and drag
 4. **View Specifications**: Selected motor specs are displayed in the side panel
 
+## Deployment
+
+This project is configured for automatic deployment to GitHub Pages via GitHub Actions.
+
+**Quick Setup:**
+1. Enable GitHub Pages in repository settings (Settings → Pages)
+2. Set source to "GitHub Actions"
+3. Push to `main` branch or manually trigger the workflow
+
+For detailed deployment instructions and troubleshooting, see [DEPLOYMENT.md](DEPLOYMENT.md).
+
 ## Project Structure
 
 ```
 fpv-motor-size-compare/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # GitHub Pages deployment workflow
 ├── src/
 │   ├── components/
 │   │   ├── Motor3D.jsx         # 3D motor component
@@ -95,6 +111,7 @@ fpv-motor-size-compare/
 ├── index.html                  # HTML template
 ├── package.json               # Project dependencies
 ├── vite.config.js             # Vite configuration
+├── DEPLOYMENT.md              # Deployment guide
 └── README.md                  # This file
 ```
 
