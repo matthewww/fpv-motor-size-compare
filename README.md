@@ -2,6 +2,8 @@
 
 Interactive 3D visualization tool for comparing FPV motor sizes. Built with React, Three.js, and React Three Fiber.
 
+🚀 **[Try it live on GitHub Pages](https://matthewww.github.io/fpv-motor-size-compare/)**
+
 ![FPV Motor Comparison Tool](https://github.com/user-attachments/assets/112b6897-4cb4-4b93-a4ab-ddfebbf006c7)
 
 ## Features
