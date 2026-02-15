@@ -134,6 +134,10 @@ export const motorSpecs = {
 };
 ```
 
+## Deployment
+
+This project is configured for automatic deployment to GitHub Pages. See [DEPLOYMENT.md](./DEPLOYMENT.md) for setup instructions.
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
