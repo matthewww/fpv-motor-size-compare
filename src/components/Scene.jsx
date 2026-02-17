@@ -44,8 +44,8 @@ export default function Scene({ selectedMotors }) {
         />
 
         {/* Render selected motors */}
-        {selectedMotors.map((spec, index) => (
-          <Motor3D key={spec.name} spec={spec} index={index} />
+        {selectedMotors.map((spec) => (
+          <Motor3D key={spec.name} spec={spec} />
         ))}
 
         {/* Camera controls */}
