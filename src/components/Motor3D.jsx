@@ -6,9 +6,8 @@ import { Html } from '@react-three/drei';
  * Renders a 3D representation of an FPV motor with accurate proportional dimensions
  * 
  * @param {Object} spec - Motor specifications (from motorData.js)
- * @param {number} index - Index for positioning motors in overlay mode
  */
-export default function Motor3D({ spec, index = 0 }) {
+export default function Motor3D({ spec }) {
   const groupRef = useRef();
 
   // Calculate dimensions
@@ -17,11 +16,8 @@ export default function Motor3D({ spec, index = 0 }) {
   const shaftRadius = spec.shaftDiameter / 2;
   const shaftHeight = spec.totalHeight - spec.baseHeight - spec.statorHeight;
 
-  // Position offset for visual clarity (slight offset for overlay)
-  const positionOffset = index * 0.5;
-
   return (
-    <group ref={groupRef} position={[positionOffset, 0, 0]}>
+    <group ref={groupRef} position={[0, 0, 0]}>
       {/* Base plate */}
       <mesh position={[0, spec.baseHeight / 2, 0]} castShadow>
         <cylinderGeometry args={[baseRadius, baseRadius, spec.baseHeight, 32]} />
