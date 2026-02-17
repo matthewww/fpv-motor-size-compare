@@ -29,6 +29,8 @@ export default function Motor3D({ spec, index = 0 }) {
           color={spec.color} 
           metalness={0.7}
           roughness={0.3}
+          transparent={true}
+          opacity={0.7}
         />
       </mesh>
 
@@ -39,6 +41,8 @@ export default function Motor3D({ spec, index = 0 }) {
           color={spec.color}
           metalness={0.6}
           roughness={0.4}
+          transparent={true}
+          opacity={0.7}
         />
       </mesh>
 
@@ -49,6 +53,8 @@ export default function Motor3D({ spec, index = 0 }) {
           color="#333333"
           metalness={0.9}
           roughness={0.2}
+          transparent={true}
+          opacity={0.8}
         />
       </mesh>
 
