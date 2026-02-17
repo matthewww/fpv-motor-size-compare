@@ -4,13 +4,13 @@ Interactive 3D visualization tool for comparing FPV motor sizes. Built with Reac
 
 🚀 **[Try it live on GitHub Pages](https://matthewww.github.io/fpv-motor-size-compare/)**
 
-![FPV Motor Comparison Tool](https://github.com/user-attachments/assets/112b6897-4cb4-4b93-a4ab-ddfebbf006c7)
+![FPV Motor Comparison Tool](https://github.com/user-attachments/assets/2d930f8d-14af-463f-b605-f3de279d0711)
 
 ## Features
 
 - ✅ Interactive 3D visualization of FPV motors
 - ✅ Accurate proportional dimensions based on real motor specs
-- ✅ Compare multiple motors simultaneously (overlay mode)
+- ✅ Compare multiple motors simultaneously (overlay mode with transparency)
 - ✅ 5 pre-configured motor sizes: 1105, 1404, 1506, 2207, 2306
 - ✅ Full camera controls (rotate, zoom, pan)
 - ✅ Motor specifications display
