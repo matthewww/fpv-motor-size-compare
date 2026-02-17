@@ -2,9 +2,9 @@
 
 Interactive 3D visualization tool for comparing FPV motor sizes. Built with React, Three.js, and React Three Fiber.
 
-🚀 **[Try it live on GitHub Pages](https://matthewww.github.io/fpv-motor-size-compare/)**
+**[Try it live on GitHub Pages](https://matthewww.github.io/fpv-motor-size-compare/)**
 
-![FPV Motor Comparison Tool](https://github.com/user-attachments/assets/2d930f8d-14af-463f-b605-f3de279d0711)
+![FPV Motor Comparison Tool](./image.png)
 
 ## Features
 
@@ -75,29 +75,6 @@ npm run preview
    - **Pan**: Right-click and drag
 4. **View Specifications**: Selected motor specs are displayed in the side panel
 
-## Project Structure
-
-```
-fpv-motor-size-compare/
-├── src/
-│   ├── components/
-│   │   ├── Motor3D.jsx         # 3D motor component
-│   │   ├── MotorSelector.jsx   # Motor selection UI
-│   │   ├── MotorSelector.css   # Selector styles
-│   │   └── Scene.jsx           # 3D scene setup
-│   ├── data/
-│   │   └── motorData.js        # Motor specifications database
-│   ├── App.jsx                 # Main application component
-│   ├── App.css                 # Application styles
-│   ├── index.css               # Global styles
-│   └── main.jsx                # Application entry point
-├── public/                     # Static assets
-├── index.html                  # HTML template
-├── package.json               # Project dependencies
-├── vite.config.js             # Vite configuration
-└── README.md                  # This file
-```
-
 ## Technology Stack
 
 - **React 19**: UI framework
@@ -105,14 +82,6 @@ fpv-motor-size-compare/
 - **React Three Fiber**: React renderer for Three.js
 - **@react-three/drei**: Useful helpers for React Three Fiber
 - **Vite**: Build tool and development server
-
-## Browser Compatibility
-
-This application requires a browser with WebGL support:
-- Chrome (recommended)
-- Firefox
-- Safari
-- Edge
 
 ## Adding New Motors
 
@@ -133,21 +102,3 @@ export const motorSpecs = {
   }
 };
 ```
-
-## Deployment
-
-This project is configured for automatic deployment to GitHub Pages. See [DEPLOYMENT.md](./DEPLOYMENT.md) for setup instructions.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is open source and available under the MIT License.
-
-## Acknowledgments
-
-- Motor dimensions based on standard FPV motor specifications
-- Built as a POC for the FPV drone community
-
