@@ -1,3 +1,6 @@
+Note: this was an experiment to see what I can build using only Copilot, and only using Github iOS.
+I have never cloned the code to my PC.
+
 # FPV Motor Size Comparison Tool
 
 Interactive 3D visualization tool for comparing FPV motor sizes. Built with React, Three.js, and React Three Fiber.
