@@ -27,10 +27,10 @@ function App() {
           <div className="instructions">
             <h3>How to Use</h3>
             <ul>
-              <li><strong>Select Motors:</strong> Click motor buttons above to add/remove from comparison</li>
-              <li><strong>Rotate:</strong> Left-click and drag</li>
+              <li><strong>Select Motors:</strong> Tap motor buttons above to add/remove from comparison</li>
+              <li><strong>Rotate:</strong> Click/touch and drag</li>
               <li><strong>Zoom:</strong> Scroll wheel or pinch</li>
-              <li><strong>Pan:</strong> Right-click and drag</li>
+              <li><strong>Pan:</strong> Right-click and drag (or two-finger drag)</li>
             </ul>
           </div>
         </div>
