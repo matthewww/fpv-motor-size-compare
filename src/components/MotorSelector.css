@@ -12,6 +12,77 @@
   font-size: 1.5em;
 }
 
+.custom-motor-form {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #494960;
+  border-radius: 8px;
+  background: #25253a;
+}
+
+.custom-motor-form h3 {
+  margin: 0 0 6px;
+  color: #fff;
+  font-size: 1.05em;
+}
+
+.custom-motor-form > p {
+  margin: 0 0 12px;
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+.custom-motor-inputs {
+  display: grid;
+  gap: 10px;
+}
+
+.custom-motor-inputs label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #eee;
+  font-size: 0.9em;
+}
+
+.custom-motor-inputs input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid #666;
+  border-radius: 6px;
+  background: #1a1a2e;
+  color: #fff;
+  font: inherit;
+}
+
+.custom-motor-inputs input:focus {
+  outline: 2px solid #8a9bff;
+  outline-offset: 1px;
+}
+
+.add-custom-motor-button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: #667eea;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-custom-motor-button:hover {
+  background: #788cf0;
+}
+
+.custom-motor-error {
+  margin: 8px 0 0 !important;
+  color: #ff9a9a !important;
+}
+
 .motor-buttons {
   display: flex;
   gap: 12px;
@@ -88,6 +159,8 @@
 }
 
 .remove-btn {
+  border: 0;
+  background: transparent;
   cursor: pointer;
   font-size: 1.5em;
   color: #ff6b6b;
@@ -104,4 +177,10 @@
   color: #ccc;
   font-size: 0.9em;
   margin: 5px 0;
+}
+
+@media (min-width: 360px) {
+  .custom-motor-inputs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }

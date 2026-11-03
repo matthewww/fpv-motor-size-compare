@@ -1,6 +1,6 @@
 /**
  * FPV Motor Specifications Database
- * 
+ *
  * Motor naming convention: First 2 digits = stator width (mm), last 2 digits = stator height (mm)
  * Example: 1105 = 11mm wide, 5mm tall stator
  */
@@ -58,6 +58,50 @@ export const motorSpecs = {
   }
 };
 
+const CUSTOM_MOTOR_PREFIX = 'custom:';
+const customMotorColors = ['#F7B267', '#C77DFF', '#8D99AE', '#F28482', '#84A59D'];
+
 export const getMotorsList = () => Object.keys(motorSpecs);
 
-export const getMotorSpec = (motorName) => motorSpecs[motorName];
+/**
+ * Create a stable key for a custom motor from its stator dimensions.
+ */
+export const getCustomMotorKey = (width, height) => {
+  const normalizedWidth = Number(width);
+  const normalizedHeight = Number(height);
+
+  if (!Number.isFinite(normalizedWidth) || !Number.isFinite(normalizedHeight)) {
+    return null;
+  }
+
+  return `${CUSTOM_MOTOR_PREFIX}${normalizedWidth}x${normalizedHeight}`;
+};
+
+const getCustomMotorSpec = (motorName) => {
+  const match = motorName.match(/^custom:(\d+(?:\.\d+)?)x(\d+(?:\.\d+)?)$/);
+  if (!match) return undefined;
+
+  const statorWidth = Number(match[1]);
+  const statorHeight = Number(match[2]);
+  if (statorWidth <= 0 || statorHeight <= 0) return undefined;
+
+  // Use dimension-derived defaults for motor properties that aren't stator dimensions.
+  const baseHeight = Math.max(2, statorHeight * 0.4);
+  const shaftHeight = Math.max(4, statorHeight * 0.75);
+  const colorIndex = Math.abs(Math.round(statorWidth * 10 + statorHeight * 100)) % customMotorColors.length;
+
+  return {
+    name: `Custom ${statorWidth}×${statorHeight}`,
+    statorWidth,
+    statorHeight,
+    shaftDiameter: statorWidth <= 14 ? 1.5 : statorWidth <= 17 ? 2 : 3,
+    mountingPattern: statorWidth <= 14 ? 'M2 12x12' : statorWidth <= 17 ? 'M2 16x16' : 'M3 16x16',
+    baseHeight,
+    totalHeight: baseHeight + statorHeight + shaftHeight,
+    color: customMotorColors[colorIndex],
+  };
+};
+
+export const getMotorSpec = (motorName) => (
+  motorSpecs[motorName] ?? getCustomMotorSpec(motorName)
+);
